@@ -1,8 +1,8 @@
 {
-  "name": "ant-design-pro",
-  "version": "4.2.1",
+  "name": "fe_rookie_blog",
+  "version": "1.0.1",
   "private": true,
-  "description": "An out-of-box UI solution for enterprise applications",
+  "description": "fe_rookie_blog",
   "scripts": {
     "analyze": "cross-env ANALYZE=1 umi build",
     "build": "cross-env UMI_ENV=build umi build",
@@ -22,7 +22,8 @@
     "test": "umi test",
     "test:all": "node ./tests/run-tests.js",
     "test:component": "umi test ./src/components",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "release": "node ./node_modules/standard2version/lib/release.js"
   },
   "browserslist": [
     "> 1%",
@@ -99,11 +100,23 @@
     "pro-download": "1.0.1",
     "province-city-china": "^6.0.3",
     "puppeteer-core": "^5.0.0",
+    "standard-version": "^9.0.0",
+    "standard2version": "^1.0.4",
     "stylelint": "^13.0.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.9.7"
   },
   "engines": {
     "node": ">=10.0.0"
-  }
+  },
+  "author": "dengpeng",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZooTopiaGG/blogs-admin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZooTopiaGG/blogs-admin.git/issues"
+  },
+  "homepage": "https://github.com/ZooTopiaGG/blogs-admin.git#readme"
 }
