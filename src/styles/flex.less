@@ -1,0 +1,92 @@
+.flex {
+  display: flex;
+}
+
+/*垂直方向 排序*/
+.flex-v {
+  flex-direction: column;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+@media screen and (min-width: 0) {
+  .flex-1 {
+    flex: auto \9;
+  }
+
+  .flex-2 {
+    flex: auto \9;
+    flex-grow: 2\9;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .flex-1 {
+    flex: auto;
+  }
+
+  .flex-2 {
+    flex: auto;
+    flex-grow: 2;
+  }
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-no-wrap {
+  flex-wrap: nowrap;
+}
+
+/*交叉轴对齐方向 */
+.flex-align-center {
+  align-items: center;
+}
+
+/*左对齐*/
+.flex-align-top {
+  align-items: flex-start;
+}
+
+/*右对齐*/
+.flex-align-bottom {
+  align-items: flex-end;
+}
+
+/*居中对齐*/
+.flex-pack-center {
+  justify-content: center;
+}
+
+.flex-pack-end {
+  justify-content: flex-end;
+}
+
+.flex-pack-start {
+  justify-content: flex-start;
+}
+
+/*分散对齐*/
+.flex-pack-justify {
+  justify-content: space-between;
+}
+
+/*距离盒子两边间距相同*/
+.flex-pack-around {
+  justify-content: space-around;
+}
