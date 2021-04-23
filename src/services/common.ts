@@ -1,7 +1,7 @@
 import request from '@/utils/request';
 
-export async function upload(file: any, url?:any) {
-  let _url = url ? url : '/upload'
+export async function upload(file: any, url?: any) {
+  let _url = url ? url : '/upload';
   return new Promise((resolve, reject) => {
     let _data = new FormData();
     _data.append('file', file);
@@ -13,7 +13,6 @@ export async function upload(file: any, url?:any) {
         if (xmlHttp.status == 200) {
           var data = xmlHttp.responseText;
           let urlJson = JSON.parse(data);
-          console.log(urlJson);
           resolve(urlJson);
           // console.log(JSON.parse(data));
         } else {
@@ -26,4 +25,8 @@ export async function upload(file: any, url?:any) {
 
 export async function defaultCover() {
   return request(`/defaultCover`);
+}
+
+export async function uploadToken() {
+  return request(`/uploadToken`);
 }

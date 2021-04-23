@@ -7,7 +7,7 @@ import { ConnectState } from '@/models/connect';
 import classnames from 'classnames';
 import moment from 'moment';
 import { addAudio, deleteAudio } from '@/services/musicManage';
-import { upload } from '@/services/common';
+import { qiniuUpload } from '@/utils/qiniuUpload';
 
 interface Iprops {
   dispatch: Dispatch;
@@ -161,13 +161,13 @@ const MusicManage: React.FC<Iprops> = props => {
   const customRequest = (file: any) => {
     setLoading(true);
     console.log(file);
-    upload(file.file, '/uploadAudio')
-      .then((res: any) => {
-        handleAddAudio(file.file.name, res.imgUrl);
+    qiniuUpload(file)
+      .then(res => {
+        console.log(UMI_VIDEO_ADDR + res.key);
+        handleAddAudio(file.file.name, UMI_VIDEO_ADDR + res.key);
       })
       .catch(e => {
         setLoading(false);
-        console.log(e);
       });
   };
 

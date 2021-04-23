@@ -49,3 +49,5 @@ declare const UMI_API_BASE: string;
 declare const UMI_ENV: string;
 
 declare const UMI_OS_ADDR: string;
+declare const UMI_VIDEO_ADDR: string;
+declare const UMI_WALLPAPER_ADDR: string;
